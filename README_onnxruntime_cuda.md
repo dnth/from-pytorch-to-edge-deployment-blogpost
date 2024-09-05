@@ -17,9 +17,15 @@ Install ONNX Runtime with GPU support:
 
 pip install -U onnxruntime-gpu==1.19.2
 
-## 4. Set up library path
-Add the Conda environment's library path to LD_LIBRARY_PATH:
+## 4. Install TensorRT
+Install TensorRT and its dependencies:
+
+pip install tensorrt==10.1.0 tensorrt-cu12==10.1.0 tensorrt-cu12-bindings==10.1.0 tensorrt-cu12-libs==10.1.0
+
+## 5. Set up library paths
+Add the Conda environment's library path and TensorRT library path to LD_LIBRARY_PATH:
 
 export LD_LIBRARY_PATH="/home/dnth/mambaforge-pypy3/envs/onnx-gpu/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/home/dnth/mambaforge-pypy3/envs/onnx-gpu/lib/python3.11/site-packages/tensorrt_libs:$LD_LIBRARY_PATH"
 
-Note: Adjust the path according to your Conda environment location.
+Note: Adjust the paths according to your Conda environment location.
