@@ -9,6 +9,9 @@ __pycache__/
 *.onnx
 *.pt
 *.tflite
+*.pth
+*.bin
+*.xml
 
 # Distribution / packaging
 .Python
